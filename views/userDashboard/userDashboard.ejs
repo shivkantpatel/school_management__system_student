@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body>
+
+    <%-include('../header/topHeaderAfterLogin')%>
+    <%-include('userProfileModel')%>
+    <section class="bg-slate-200">
+        <div>
+          <img class="max-h-[500px]  w-full object-cover"
+            src="https://www.sskunjpura.org/admin/logged/images/homeslider/c81e728d9d4c2f636f067f89cc14862c2-Academic-Block-(SS-Kunjpura)-(1).jpg"
+            alt="">
+        </div>
+    </section>
+
+    <div class="py-8">
+        <div class="w-[90%] m-auto grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 gap-5">
+            <div
+            class="bg-white flex justify-center rounded-[10px] hover:shadow-[0px_-6px_3px_yellow] shadow-[0px_0px_5px_0px_skyblue]">
+            <a class="p-10 md:p-20"  href=" #">About Information ....</a>
+          </div>
+          <div
+            class=" bg-white flex justify-center rounded-[10px] hover:shadow-[0px_7px_3px_0px_#0010ff9e] shadow-[0px_0px_5px_0px_skyblue]">
+            <a class="p-10 md:p-20" href=" #">About Information ....</a>
+          </div>
+          <div
+            class="sm:col-span-2 md:col-span-1 lg:col-span-1 bg-white flex justify-center rounded-[10px] hover:shadow-[0px_-6px_3px_yellow] shadow-[0px_0px_5px_0px_skyblue]">
+            <a class="p-10 md:p-20"  href=" #">About Information ....</a>
+          </div>
+        </div>
+    </div>
+
+    <div><%- include('../header/footer') %></div>
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <script src="../../controller/userdashBoard/topHeader.js"></script>
+    
+</body>
+
+</html>

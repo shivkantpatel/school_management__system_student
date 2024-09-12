@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login model</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body>
+
+    <div class="fixed inset-0 bg-black bg-opacity-30 h-screen w-full flex justify-center items-center hidden TopheaderModelOuterRow">
+        <div class="relative opacity-0 transform  bg-[#111827] shadow-[0px_7px_0px_0px_#303f9fc2] w-[90%] md:w-[45%] h-[65vh] rounded-[10px] TopheaderModelInnerrow transition-all duration-300 ease-in-out translate scale-75">
+            <i class="fa-solid fa-xmark float-end m-3 text-[22px] cursor-pointer text-white UserModelCloseBtn"></i>
+            <!-- Top header -->
+            <div class="w-full mt-7  px-10 ">
+
+                <div class="flex items-center justify-center pb-3 ">
+                    <div class="w-[70px] h-[70px] rounded-full bg-white overflow-hidden">
+                        <a href="<%=result[0].photo%>"><img class="object-contain w-full h-full" src="<%=result[0].photo%>" alt="Profile Image"></a>
+                    </div>
+                    
+                   
+                </div>
+    
+                <form class="  grid grid-cols-2 w-full gap-x-5">
+    
+                   
+                    <div class="mb-5">
+                        <label for="email" class="block mb-1 text-[12px] sm:text-[14px] font-medium text-[#fff] dark:text-white">
+                            Roll No</label>
+                        <div
+                            class="rounded-[10px] w-full flex items-center shadow-sm border border-gray-300 focus-within:ring-blue-500 focus-within:border-blue-500 p-2.5 dark:bg-gray-700 dark:border-gray-600">
+                            <i class="fa-solid fa-user text-[#fff] dark:text-gray-400 mr-2"></i>
+                            <input type="text"
+                                class="w-full bg-transparent text-[#fff] text-[12px] sm:text-[14px] rounded-lg focus:outline-none dark:placeholder-gray-400 dark:text-white"
+                                placeholder="<%=result[0].student_rollNo%>" value="<%=result[0].student_rollNo%>" readonly />
+                        </div>
+    
+                    </div>
+                    <div class="mb-5">
+                        <label for="email" class="block mb-1 text-[12px] sm:text-[14px] font-medium text-[#fff] dark:text-white">
+                            Name</label>
+                        <div
+                            class="rounded-[10px] w-full flex items-center shadow-sm border border-gray-300 focus-within:ring-blue-500 focus-within:border-blue-500 p-2.5 dark:bg-gray-700 dark:border-gray-600">
+                            <i class="fa-solid fa-circle-user text-[#fff] dark:text-gray-400 mr-2"></i>
+                            <input type="text" 
+                                class="w-full bg-transparent text-[#fff] text-[12px] sm:text-[14px] rounded-lg focus:outline-none dark:placeholder-gray-400 dark:text-white"
+                                placeholder="<%=result[0].student_name%>" value="<%=result[0].student_name%>" readonly />
+                        </div>
+    
+    
+                    </div>
+                    <div class="mb-5">
+                        <label for="email" class="block mb-1 text-[12px] sm:text-[14px] font-medium text-[#fff] dark:text-white">
+                            Father Name No</label>
+                        <div
+                            class="rounded-[10px] w-full flex items-center shadow-sm border border-gray-300 focus-within:ring-blue-500 focus-within:border-blue-500 p-2.5 dark:bg-gray-700 dark:border-gray-600">
+                            <i class="fa-solid fa-circle-user text-[#fff] dark:text-gray-400 mr-2"></i>
+                            <input type="text" 
+                                class="w-full bg-transparent text-[#fff] text-[12px] sm:text-[14px] rounded-lg focus:outline-none dark:placeholder-gray-400 dark:text-white"
+                                placeholder="<%=result[0].father_name%>" value="<%=result[0].father_name%>" readonly />
+                        </div>
+    
+                    </div>
+                    <div class="mb-5">
+                        <label for="email" class="block mb-1 text-[12px] sm:text-[14px] font-medium text-[#fff] dark:text-white">
+                            Class</label>
+                        <div
+                            class="rounded-[10px] w-full flex items-center shadow-sm border border-gray-300 focus-within:ring-blue-500 focus-within:border-blue-500 p-2.5 dark:bg-gray-700 dark:border-gray-600">
+                            
+                            <i class="fa-solid fa-diamond text-[#fff] dark:text-gray-400 mr-2"></i>
+                        
+                            <input type="text" 
+                                class="w-full bg-transparent text-[#fff] text-[12px] sm:text-[14px] rounded-lg focus:outline-none dark:placeholder-gray-400 dark:text-white"
+                                placeholder="<%=result[0].Class%>" value="<%=result[0].Class%>" readonly />
+                        </div>
+    
+                    </div>
+                    <div class="mb-5">
+                        <label for="email" class="block mb-1 text-[12px] sm:text-[14px] font-medium text-[#fff] dark:text-white">
+                            Section</label>
+                        <div
+                            class="rounded-[10px] w-full flex items-center shadow-sm border border-gray-300 focus-within:ring-blue-500 focus-within:border-blue-500 p-2.5 dark:bg-gray-700 dark:border-gray-600">
+                            <i class="fa-solid fa-c text-[#fff] dark:text-gray-400 mr-2"></i>
+                            <input type="text" 
+                                class="w-full bg-transparent text-[#fff] text-[12px] sm:text-[14px] rounded-lg focus:outline-none dark:placeholder-gray-400 dark:text-white"
+                                placeholder="<%=result[0].section%>" value="<%=result[0].section%>" readonly  />
+                        </div>
+    
+                    </div>
+                    <div class="mb-5">
+                        <label for="email" class="block mb-1 text-[12px] sm:text-[14px] font-medium text-[#fff] dark:text-white">
+                            Email</label>
+                        <div
+                            class="rounded-[10px] w-full flex items-center shadow-sm border border-gray-300 focus-within:ring-blue-500 focus-within:border-blue-500 p-2.5 dark:bg-gray-700 dark:border-gray-600">
+                            <i class="fa-solid fa-envelope text-[#fff] dark:text-gray-400 mr-2"></i>
+                            
+                            <input type="email" id="email"
+                                class="w-full bg-transparent text-[#fff] text-[12px] sm:text-[14px] rounded-lg focus:outline-none dark:placeholder-gray-400 dark:text-white"
+                                placeholder="<%=result[0].email%>" value="<%=result[0].email%>" readonly />
+                        </div>
+    
+                    </div>
+                    <div class="mb-5">
+                        <label  class="block mb-1 text-[12px] sm:text-[14px] font-medium text-[#fff] dark:text-white">
+                            Contact Number</label>
+                        <div
+                            class="rounded-[10px] w-full flex items-center shadow-sm border border-gray-300 focus-within:ring-blue-500 focus-within:border-blue-500 p-2.5 dark:bg-gray-700 dark:border-gray-600">
+                            <i class="fa-solid fa-phone text-[#fff] dark:text-gray-400 mr-2"></i>
+                            
+                            <input type="text" id="email"
+                                class="w-full bg-transparent text-[#fff] text-[12px] sm:text-[14px] rounded-lg focus:outline-none dark:placeholder-gray-400 dark:text-white"
+                                placeholder="<%=result[0].father_mobile_no%>" value="<%=result[0].father_mobile_no%>" readonly />
+                        </div>
+    
+                    </div>
+                    
+                    <div class="mb-5 ">
+                        <label for="email" class="block mb-1 text-[12px] sm:text-[14px] font-medium text-[#fff] dark:text-white">
+                            Date Of Berth</label>
+                        <div
+                            class="rounded-[10px] w-full flex items-center shadow-sm border border-gray-300 focus-within:ring-blue-500 focus-within:border-blue-500 p-2.5 dark:bg-gray-700 dark:border-gray-600">
+                            <i class="fa-solid fa-calendar-check text-[#fff] dark:text-gray-400 mr-2"></i>
+                            
+                            <input type="text" 
+                                class=" w-full bg-transparent text-[#fff] text-[12px] sm:text-[14px] rounded-lg focus:outline-none dark:placeholder-gray-400 dark:text-white"
+                                placeholder="<%=result[0].date_of_birth%>" value="<%=result[0].date_of_birth%>" readonly />
+                        </div>
+    
+                    </div>
+                    
+                    
+                </form>
+    
+            </div>
+
+
+        </div>
+    </div>
+    
+    
+
+
+</body>
+
+</html>

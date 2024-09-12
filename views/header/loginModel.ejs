@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login model</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body>
+
+    <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded  fixed top-20 right-[-55%] md:w-[50%] w-[70%] opacity-0 transform transition-all ease-in-out duration-500 modelErr" >
+                
+        <i class="fa-solid fa-circle-exclamation pr-3"></i><span class="spantagErr"></span>
+        
+    </div>
+
+    <div
+        class="bg-[#111827] absolute w-[70%]  sm:w-[35%] h-[55vh] rounded-[10px] top-[-400px] left-[30%] opacity-0 transform transition-all ease-in-out duration-500 animate__animated z-50 loginModelWindow ">
+        <i class="fa-solid fa-xmark float-end m-3 text-[22px] cursor-pointer text-[#fff] modelXcloseWindow"></i>
+
+        <div class="w-full py-2 px-5  mt-14 ">
+
+           
+
+            <form class="max-w-sm mx-auto" id="modelForm" method="post">
+                <div class="mb-5">
+                    <label for="email" class="block mb-2 text-sm font-medium text-[#fff] dark:text-white">Your
+                        Roll No</label>
+                    <input type="text" id="studentRollNo" name="studentRollNo"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        placeholder="Roll No" required />
+                        <p class="text-red-600 studentRollNo"></p>
+                </div>
+                <div class="mb-5">
+                    <label for="password" class="block mb-2 text-sm font-medium  text-[#fff] dark:text-white">Your
+                        password</label>
+                    <input type="password" id="passwor_d" name="passwor_d"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        required />
+                        <p class="text-red-600 passwor_d" ></p>
+                </div>
+                <div class="flex items-start mb-5">
+                    <div class="flex items-center h-5">
+                        <input id="remember" type="checkbox" value=""
+                            class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800"
+                            required />
+                    </div>
+                    <label for="remember" class="ms-2 text-sm font-medium  text-[#fff] dark:text-gray-300">Remember
+                        me</label>
+                </div>
+                <button type="button"
+                    class="text-white  focus:ring-4 focus:outline-none font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center border loginModelSubmitBtn">Submit</button>
+            </form>
+
+        </div>
+    </div>
+</body>
+
+</html>

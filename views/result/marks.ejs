@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+   
+
+    <a href="/userDashboard"><i class="fa-solid fa-arrow-left fixed top-[10%] left-[3%] text-[20px]"></i></a>
+
+    <div class="w-full border shadow-[inset_0px_-1px_20px_0px_#3600ff38]   ">
+        <div class="w-[90%] mx-auto  px-0 flex justify-between items-center">
+            <div class="flex items-center mix-blend-color">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjRKZH2XEFHdEkiQJ6JilB54ypDt2QL5ybeA&s"
+                    alt="School Logo" class="h-14 w-14 mr-1">
+                <span class="text-red-950 text-base">School</span>
+            </div>
+           
+            <div class="flex gap-x-2  w-full  justify-between">
+
+
+                <div class="md:w-[70%] lg:w-[60%] w-full flex md:justify-end absolute top-[-200px] sm:opacity-100 opacity-0 transform transition-all ease-in-out duration-500 left-0  p-5 md:p-0 md:static bg-[#111827] md:bg-opacity-0 topHeaderMeanubar">
+                    <ul class="flex md:space-x-4 flex-col md:flex-row gap-3 md:gap-0  w-full  md:justify-end ">
+                        
+                        <li class=""><a href="/marks" class="inline-block w-full text-white hover:text-white border border-purple-700 hover:bg-purple-800 focus:ring-2 focus:outline-none focus:ring-purple-300 font-medium rounded-lg text-sm px-4 py-2 text-center  dark:border-purple-400 dark:text-purple-400 dark:hover:text-white dark:hover:bg-purple-500 dark:focus:ring-purple-900">Marks</a></li>
+                        <li><a href="/fee" class="inline-block w-full   text-white hover:text-white border border-purple-700 hover:bg-purple-800 focus:ring-2 focus:outline-none focus:ring-purple-300 font-medium rounded-lg text-sm px-4 py-2 text-center  dark:border-purple-400 dark:text-purple-400 dark:hover:text-white dark:hover:bg-purple-500 dark:focus:ring-purple-900">Fees </a></li>
+                       
+                       
+                    </ul>
+                    
+    
+                </div>
+                <div class="md:w-[30%] w-full gap-3 flex justify-end ">
+                     
+                
+                <a href="/sessionDestroy" class="text-white bg-[#050708] hover:bg-[#050708]/90 focus:ring-4 focus:outline-none focus:ring-[#050708]/50 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center dark:focus:ring-[#050708]/50 dark:hover:bg-[#050708]/30 ">Logout<i class="fa-solid fa-right-from-bracket pl-1 text-center"></i></a>
+
+                <button
+                    class="text-white bg-[#050708] hover:bg-[#050708]/90 focus:ring-2 focus:outline-none focus:ring-[#050708]/50 font-medium rounded-lg text-sm px-3 py-2 text-center  items-center dark:focus:ring-[#050708]/50 dark:hover:bg-[#050708]/30  md:hidden  headerTopToogleBtn"
+                    type="button"> <i class="fa-solid fa-bars"></i></a>
+                </button>
+            </div>
+
+            </div>
+        </div 
+    </div>
+
+    <div class="bg-[#f5f3f33c] w-full h-[92vh] border-t ">
+        <div class="w-[90%] sm:h-[22vh] h-[34vh] m-auto">
+
+           
+           
+            <form action="" id="resultCheckForm" method="post" class=" flex sm:flex-row flex-col sm:px-20 px-10 sm:gap-6 gap-y-2 justify-center w-full  h-[100%] items-center">
+
+                <input type="hidden" name="studentRollNo" value="<%=result[0].student_rollNo%>">
+                <input type="hidden" name="studentClass" value="<%=result[0].Class%>">
+
+                <div class="sm:w-[40%] w-[80%]">
+                    <label class="block sm:mb-2 mb-1 text-sm font-medium text-gray-900 ">Select an option</label>
+                    <select id="exam_type" name="exam_type"
+                    class="bg-white border border-gray-300 shadow-xl text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:placeholder-gray-400  dark:focus:ring-blue-500 dark:focus:border-blue-500 ">
+                        <option selected disabled>Choose a Exam Type</option>
+                        <option value="Quarterly Exams">Quarterly Exams</option>
+                        <option value="Half-Yearly Exams">Half-Yearly Exams</option>
+                        <option value="Final Exams">Final Exams</option>
+                    </select>
+                </div>
+                <div class="sm:w-[40%] w-[80%]">
+                    <label for="last_name" class="block md:mb-2 mb-1 text-sm font-medium text-gray-900 ">Date</label>
+                    <input id="DATE" type="date" name="date" class="bg-white shadow-xl text-gray-800 border border-gray-300 text-sm rounded-lg block w-full p-2.5 focus:ring-blue-500 focus:border-blue-500" required />
+
+                   
+                </div>
+                
+                    <button type="button" id="chekResultBtn" class="text-white w-[80%] bg-blue-700  sm:mt-6 mt-2   font-medium rounded-lg text-sm  sm:w-auto px-5 py-2.5 text-center ">Check</button>
+                
+            </form>
+            <p id="ERRPTAG" class="text-red-600 font-semibold text-center text-[20px]"></p>
+        </div>
+        
+        <!-- second div -->
+
+        <div class="result_div hidden w-[90%] sm:h-[66vh] h-[55vh] flex m-auto items-center justify-center bg-white shadow-[0px_0_14px_0px_#77777777] rounded-2xl">
+           <div class="w-[90%] h-[80%] overflow-auto ">
+                <table class="w-[70%] m-auto">
+                    <thead>
+                        <tr class="shadow-xl">
+                            <td class="border px-6 py-3 uppercase">Subject</td>
+                            <td class="border px-6 py-3 uppercase">Min-marks</td>
+                            <td class="border px-6 py-3 uppercase">Max-marks</td>
+                            <td class="border px-6 py-3 uppercase">Marks</td>
+                        </tr>
+                    </thead>
+                    
+                    <tbody class="tBODY w-[50%] ">
+                      
+                    </tbody>
+                    
+                    <tfoot class="TfooterR w-[50%] border-2 border-[#bbadad]">
+                        
+                    </tfoot>
+                        
+                </table>
+           </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+
+    <script>
+
+        $(document).ready(function(){
+            
+            $('.headerTopToogleBtn').click(function () {
+
+                $(this).find('i').toggleClass('fa-xmark fa-bars ');
+                $('.topHeaderMeanubar').toggleClass('top-14 top-[-200px] opacity-100 opacity-0')
+
+            });
+            
+        })
+    </script>
+
+    <script src="../../controller/marks/marks.js"></script>
+</body>
+</html>
