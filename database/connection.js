@@ -5,7 +5,7 @@ let connection = mysql.createConnection({
     user:'root',
     port: 3306,
     password:'sLNcmhAoURrTLIVBfvwORoezBHfJaaWe',
-    database:'railway'
+    database:'railway'   
 });
 
 
